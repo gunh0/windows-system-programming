@@ -1,0 +1,3 @@
+﻿  MyThread.cpp
+D:\_Workspace\BoB_JackpotProj\WindowsSystemPro\3.MyThread\MyThread.cpp(102,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  3.MyThread.vcxproj -> D:\_Workspace\BoB_JackpotProj\WindowsSystemPro\Debug\3.MyThread.exe

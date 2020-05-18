@@ -1,0 +1,4 @@
+﻿  ThreadExcept.cpp
+D:\_Workspace\BoB_JackpotProj\WindowsSystemPro\2.ThreadExcept\ThreadExcept.cpp(18,25): warning C4477: 'sprintf' : format string '%p' requires an argument of type 'void *', but variadic argument 2 has type 'ULONG_PTR'
+D:\_Workspace\BoB_JackpotProj\WindowsSystemPro\2.ThreadExcept\ThreadExcept.cpp(63,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  2.ThreadExcept.vcxproj -> D:\_Workspace\BoB_JackpotProj\WindowsSystemPro\Debug\2.ThreadExcept.exe
