@@ -1,3 +1,0 @@
-﻿  InterLock.cpp
-D:\_Workspace\BoB_JackpotProj\3.WindowsSystemProg\4.InterLock\InterLock.cpp(56,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
-  4.InterLock.vcxproj -> D:\_Workspace\BoB_JackpotProj\3.WindowsSystemProg\Debug\4.InterLock.exe

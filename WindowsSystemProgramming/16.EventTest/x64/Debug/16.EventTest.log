@@ -1,3 +1,0 @@
-﻿  EventTest.cpp
-D:\_Workspace\BoB_JackpotProject\3.WindowsSystemProg\16.EventTest\EventTest.cpp(41,1): warning C4326: return type of 'wmain' should be 'int' instead of 'void'
-  16.EventTest.vcxproj -> D:\_Workspace\BoB_JackpotProject\3.WindowsSystemProg\x64\Debug\16.EventTest.exe

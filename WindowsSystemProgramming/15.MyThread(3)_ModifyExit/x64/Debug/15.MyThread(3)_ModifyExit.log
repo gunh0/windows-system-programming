@@ -1,4 +1,0 @@
-﻿  MyThread3.cpp
-D:\_Workspace\BoB_JackpotProject\3.WindowsSystemProg\15.MyThread(3)_ModifyExit\MyThread3.cpp(99,1): warning C4326: return type of 'wmain' should be 'int' instead of 'void'
-  LINK : D:\_Workspace\BoB_JackpotProject\3.WindowsSystemProg\x64\Debug\15.MyThread(3)_ModifyExit.exe not found or not built by the last incremental link; performing full link
-  15.MyThread(3)_ModifyExit.vcxproj -> D:\_Workspace\BoB_JackpotProject\3.WindowsSystemProg\x64\Debug\15.MyThread(3)_ModifyExit.exe

@@ -1,3 +1,0 @@
-﻿  MultiSyncWaits.cpp
-D:\_Workspace\BoB_JackpotProject\3.WindowsSystemProg\17.MultiSyncWaits\MultiSyncWaits.cpp(49,1): warning C4326: return type of 'wmain' should be 'int' instead of 'void'
-  17.MultiSyncWaits.vcxproj -> D:\_Workspace\BoB_JackpotProject\3.WindowsSystemProg\x64\Debug\17.MultiSyncWaits.exe

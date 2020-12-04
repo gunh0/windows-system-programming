@@ -1,6 +1,14 @@
-# Synchronization
+# Windows System Programming
 
-### Thread & Synchronization
+***Window system programming from the perspective of synchronous and asynchronous Input/Output.***
+
+<br/>
+
+<br/>
+
+# 1. Synchronization (동기화)
+
+### 1-1. Thread & Synchronization (스레드와 동기화)
 
 **Windows system elements required for thread synchronization**
 
@@ -10,8 +18,9 @@
 
 - **Elements of Synchronization**
 
-Scheduling processes, Kernel objects, Threads, Thread scheduling
-Thread Programming Pattern
+  - Scheduling processes, Kernel objects, Threads, Thread scheduling
+
+  - Thread Programming Pattern
 
 >1. CreateThread
 >2. ThreadExcept
@@ -19,9 +28,8 @@ Thread Programming Pattern
 
 <br/>
 
-- **thread synchronization**
-
-The Meaning and Necessity of Synchronicization from the Perspective of **Atomicity** and **Instruction Reordering**
+- **Thread Synchronization**
+  - The Meaning and Necessity of Synchronicization from the Perspective of **Atomicity** and **Instruction Reordering**
 
 >4. InterLock
 >5. MemBarrier
@@ -30,7 +38,7 @@ The Meaning and Necessity of Synchronicization from the Perspective of **Atomici
 
 <br/>
 
-### Synchronize with Kernel Objects
+### 1-2. Synchronize with Kernel Objects (커널 객체와 동기화)
 
 **Describes the sync wait functions and sync-only kernel objects provided by Windows**
 
@@ -40,9 +48,9 @@ The Meaning and Necessity of Synchronicization from the Perspective of **Atomici
 
 - **Thread Synchronization API**
 
-Description of the standby function that waits for threads to synchronize
+  - Description of the standby function that waits for threads to synchronize
 
-Understand the relationship between the standby function and the kernel object
+  - Understand the relationship between the standby function and the kernel object
 
 > 6.WaitThread
 >
@@ -54,7 +62,7 @@ Understand the relationship between the standby function and the kernel object
 
 - **Synchronization objects for data protection**
 
-Describe Mutex and Semaphore from the perspective of protection of shared resources
+  - Describe Mutex and Semaphore from the perspective of protection of shared resources
 
 > 9.MutexTest
 >
@@ -70,7 +78,7 @@ Describe Mutex and Semaphore from the perspective of protection of shared resour
 
 - **Synchronization object for flow control**
 
-Description of synchronization-only objects for the purpose of controlling and notifying flows between threads.
+  - Description of synchronization-only objects for the purpose of controlling and notifying flows between threads.
 
 > 14.ExitWithEvent
 >
@@ -81,3 +89,4 @@ Description of synchronization-only objects for the purpose of controlling and n
 > 17.MultiSyncWaits
 >
 > 18.EventNotify
+
