@@ -10,23 +10,22 @@
 #include "iostream"
 using namespace std;
 
-
-#define CMD_NONE	  0
-#define CMD_STR		  1		// 문자열
-#define CMD_POINT	  2		// POINT 구조체
-#define CMD_TIME	  3		// SYSTMETIME 구조체
-#define CMD_EXIT	100		// 종료 명령
+#define CMD_NONE 0
+#define CMD_STR 1	 // 문자열
+#define CMD_POINT 2	 // POINT 구조체
+#define CMD_TIME 3	 // SYSTMETIME 구조체
+#define CMD_EXIT 100 // 종료 명령
 
 struct WAIT_ENV
 {
-	HANDLE	_hevSend;		// 쓰기 완료 통지용 이벤트
-	HANDLE	_hevResp;		// 읽기 완료 통지용 이벤트
-	BYTE	_arBuff[256];	// 공유 버퍼
+	HANDLE _hevSend;   // 쓰기 완료 통지용 이벤트
+	HANDLE _hevResp;   // 읽기 완료 통지용 이벤트
+	BYTE _arBuff[256]; // 공유 버퍼
 };
 
 DWORD WINAPI WorkerProc(LPVOID pParam)
 {
-	WAIT_ENV* pwe = (WAIT_ENV*)pParam;
+	WAIT_ENV *pwe = (WAIT_ENV *)pParam;
 	DWORD dwThrId = GetCurrentThreadId();
 
 	while (true)
@@ -41,14 +40,16 @@ DWORD WINAPI WorkerProc(LPVOID pParam)
 		}
 
 		PBYTE pIter = pwe->_arBuff;
-		LONG lCmd = *((PLONG)pIter); pIter += sizeof(LONG);
+		LONG lCmd = *((PLONG)pIter);
+		pIter += sizeof(LONG);
 		if (lCmd == CMD_EXIT)
-			break;	// 공유 버퍼에서 명령을 읽어들여 종료 명령이면 바로 루프를 탈출한다. 	
+			break; // 공유 버퍼에서 명령을 읽어들여 종료 명령이면 바로 루프를 탈출한다.
 
-		LONG lSize = *((PLONG)pIter); pIter += sizeof(LONG);
-		PBYTE pData = new BYTE[lSize + 1];	// lSize + 1 만큼의 버퍼를 할당한 이유는 문자열일 경우 마지막 NULL 문자를 지정하기 위함 	
-		memcpy(pData, pIter, lSize);	// 공유 버퍼에서 데이터 크기를 얻고 그 크기만큼 임시 버퍼를 할당한 후 데이터 부분을 복사한다.
-		SetEvent(pwe->_hevResp);	// 공유 버퍼에서 데이터를 모두 읽어오면 메인 스레드로 하여금 다음 명령을 수신할 수 있도록 읽기 완료 통지용 이벤트를 시그널링한다.
+		LONG lSize = *((PLONG)pIter);
+		pIter += sizeof(LONG);
+		PBYTE pData = new BYTE[lSize + 1]; // lSize + 1 만큼의 버퍼를 할당한 이유는 문자열일 경우 마지막 NULL 문자를 지정하기 위함
+		memcpy(pData, pIter, lSize);	   // 공유 버퍼에서 데이터 크기를 얻고 그 크기만큼 임시 버퍼를 할당한 후 데이터 부분을 복사한다.
+		SetEvent(pwe->_hevResp);		   // 공유 버퍼에서 데이터를 모두 읽어오면 메인 스레드로 하여금 다음 명령을 수신할 수 있도록 읽기 완료 통지용 이벤트를 시그널링한다.
 		// 그리고 명령 처리 스레드는 읽어들인 데이터에 대해 명령 종류별로 처리를 수행한다.
 		// 이 시점부터 메인 스렝드의 명령 수신 처리와 본 스레드의 이미 수신된 명령에 대한 작업 처리가 동시에 수행된다.
 
@@ -75,8 +76,8 @@ DWORD WINAPI WorkerProc(LPVOID pParam)
 		{
 			PSYSTEMTIME pst = (PSYSTEMTIME)pData;
 			printf("  <== R-TH %d read TIME : %04d-%02d-%02d %02d:%02d:%02d+%03d\n",
-				dwThrId, pst->wYear, pst->wMonth, pst->wDay, pst->wHour,
-				pst->wMinute, pst->wSecond, pst->wMilliseconds);
+				   dwThrId, pst->wYear, pst->wMonth, pst->wDay, pst->wHour,
+				   pst->wMinute, pst->wSecond, pst->wMilliseconds);
 		}
 		break;
 		}
@@ -94,14 +95,15 @@ void _tmain()
 	cout << "  [1] \"time\"" << endl;
 	cout << "  [2] \"point\"" << endl;
 	cout << "  [3] Other User Input String" << endl;
-	cout << "  [4] \"quit\"" << endl << endl;
+	cout << "  [4] \"quit\"" << endl
+		 << endl;
 
 	WAIT_ENV we;
 	we._hevSend = CreateEvent(NULL, FALSE, FALSE, NULL);
 	we._hevResp = CreateEvent(NULL, FALSE, FALSE, NULL);
 	// 쓰기 완료 이벤트와 읽기 완료 이벤트를 각각 자동 리셋 이벤트로 생성한다.
 
-	DWORD  dwThrID;
+	DWORD dwThrID;
 	HANDLE hThread = CreateThread(NULL, 0, WorkerProc, &we, 0, &dwThrID);
 	// 스레드를 생성하고 WAIT_ENV의 포인터를 매개변수로 넘긴다.
 
@@ -128,7 +130,8 @@ void _tmain()
 		else if (_stricmp(szIn, "point") == 0)
 		{
 			POINT pt;
-			pt.x = rand() % 1000; pt.y = rand() % 1000;
+			pt.x = rand() % 1000;
+			pt.y = rand() % 1000;
 			*((PPOINT)pIter) = pt;
 			lCmd = CMD_POINT, lSize = sizeof(pt);
 			// "point"인 경우 현재 난수를 통해 x,y 좌표를 구해서 POINT 구조체에 대입한 후 공유 버퍼에 쓴다.

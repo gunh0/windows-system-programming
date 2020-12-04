@@ -16,11 +16,10 @@
 
 ---
 
-- **Elements of Synchronization**
-
-  - Scheduling processes, Kernel objects, Threads, Thread scheduling
-
-  - Thread Programming Pattern
+- **Elements of Synchronization / 동기화의 요소**
+- Scheduling processes, Kernel objects, Threads, Thread scheduling
+  
+- Thread Programming Pattern
 
 >1. CreateThread
 >2. ThreadExcept
@@ -28,7 +27,7 @@
 
 <br/>
 
-- **Thread Synchronization**
+- **Thread Synchronization / 스레드 동기화**
   - The Meaning and Necessity of Synchronicization from the Perspective of **Atomicity** and **Instruction Reordering**
 
 >4. InterLock
@@ -46,47 +45,45 @@
 
 -----
 
-- **Thread Synchronization API**
+- **Thread Synchronization API / 스레드 동기화 API**
+- Description of the standby function that waits for threads to synchronize
+  
+- Understand the relationship between the standby function and the kernel object
 
-  - Description of the standby function that waits for threads to synchronize
-
-  - Understand the relationship between the standby function and the kernel object
-
-> 6.WaitThread
+> 6. WaitThread
 >
-> 7.MyThread_ModifyWait
+> 7. MyThread_ModifyWait
 >
-> 8.WaitMultiThreads
+> 8. WaitMultiThreads
 
 <br/>
 
-- **Synchronization objects for data protection**
+- **Synchronization objects for data protection / 데이터 보호를 위한 동기화 객체**
+- Describe Mutex and Semaphore from the perspective of protection of shared resources
 
-  - Describe Mutex and Semaphore from the perspective of protection of shared resources
-
-> 9.MutexTest
+> 9. MutexTest
 >
-> 10.MutexNoti
+> 10. MutexNoti
 >
-> 11.SemaphoreTest
+> 11. SemaphoreTest
 >
-> 12.TPSemaphore
+> 12. TPSemaphore
 >
-> 13.WQSemaphore
+> 13. WQSemaphore
 
 <br/>
 
-- **Synchronization object for flow control**
+- **Synchronization object for flow control / 흐름 제어를 위한 동기화 객체** 
+- Description of synchronization-only objects for the purpose of controlling and notifying flows between threads.
 
-  - Description of synchronization-only objects for the purpose of controlling and notifying flows between threads.
-
-> 14.ExitWithEvent
+> 14. ExitWithEvent
 >
-> 15.MyThread(3)_ModifyExit
+> 15. MyThread(3)_ModifyExit
 >
-> 16.EventTest
+> 16. EventTest
 >
-> 17.MultiSyncWaits
+> 17. MultiSyncWaits
 >
-> 18.EventNotify
+> 18. EventNotify
+> 19. WQNotify
 
