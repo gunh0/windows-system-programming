@@ -21,6 +21,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "07_MyThread2", "07_MyThread
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "20_EventNotify2", "20_EventNotify2\20_EventNotify2.vcxproj", "{AFF93E72-C851-49B4-9D34-6381933EF44D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "18_EventNotify", "18_EventNotify\18_EventNotify.vcxproj", "{0770D5CA-FB39-459D-B844-7BC851325047}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -101,6 +103,14 @@ Global
 		{AFF93E72-C851-49B4-9D34-6381933EF44D}.Release|x64.Build.0 = Release|x64
 		{AFF93E72-C851-49B4-9D34-6381933EF44D}.Release|x86.ActiveCfg = Release|Win32
 		{AFF93E72-C851-49B4-9D34-6381933EF44D}.Release|x86.Build.0 = Release|Win32
+		{0770D5CA-FB39-459D-B844-7BC851325047}.Debug|x64.ActiveCfg = Debug|x64
+		{0770D5CA-FB39-459D-B844-7BC851325047}.Debug|x64.Build.0 = Debug|x64
+		{0770D5CA-FB39-459D-B844-7BC851325047}.Debug|x86.ActiveCfg = Debug|Win32
+		{0770D5CA-FB39-459D-B844-7BC851325047}.Debug|x86.Build.0 = Debug|Win32
+		{0770D5CA-FB39-459D-B844-7BC851325047}.Release|x64.ActiveCfg = Release|x64
+		{0770D5CA-FB39-459D-B844-7BC851325047}.Release|x64.Build.0 = Release|x64
+		{0770D5CA-FB39-459D-B844-7BC851325047}.Release|x86.ActiveCfg = Release|Win32
+		{0770D5CA-FB39-459D-B844-7BC851325047}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
