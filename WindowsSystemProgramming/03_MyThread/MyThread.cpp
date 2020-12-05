@@ -87,7 +87,7 @@ void MyClass::InnerThreadProc()
 		SYSTEMTIME st;
 		GetLocalTime(&st);
 		printf("Thread %d, delay %d => %5d/%02d/%02d-%02d:%02d:%02d+%03d\n",
-			m_dwThreadId, m_dwDelay, st.wYear, st.wMonth, st.wDay, 
+			m_dwThreadId, m_dwDelay, st.wYear, st.wMonth, st.wDay,
 			st.wHour, st.wMinute, st.wSecond, st.wMilliseconds);
 		Sleep(m_dwDelay);
 		// 스레드의 작업 처리 부분을 Sleep을 통해 에뮬레이션한다.

@@ -44,7 +44,7 @@ void _tmain()
 
 	getchar();
 
-	cout << "A= " << g_a << ", B=" << g_b << endl;
+	cout << "A=" << g_a << ", B=" << g_b << endl;
 }
 
 //Debug mode (F10) > Windows > Disassembley (Ctrl + Alt + D)
