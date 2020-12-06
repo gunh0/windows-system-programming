@@ -86,4 +86,5 @@
 > 18. EventNotify
 > 19. WQNotify
 > 20. EventNotify2
+> 21. EvtRWLock
 
