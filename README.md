@@ -17,9 +17,8 @@
 ---
 
 - **Elements of Synchronization / 동기화의 요소**
-- Scheduling processes, Kernel objects, Threads, Thread scheduling
-  
-- Thread Programming Pattern
+  - Scheduling processes, Kernel objects, Threads, Thread scheduling
+  - Thread Programming Pattern
 
 >1. [CreateThread](https://github.com/devgunho/Windows_System_Programming/blob/master/WindowsSystemProgramming/01_CreateThread/CreateThread.cpp)
 >2. [ThreadExcept](https://github.com/devgunho/Windows_System_Programming/blob/master/WindowsSystemProgramming/02_ThreadExcept/ThreadExcept.cpp)
@@ -50,24 +49,18 @@
   - Understand the relationship between the standby function and the kernel object
 
 > 6. [WaitThread](https://github.com/devgunho/Windows_System_Programming/blob/master/WindowsSystemProgramming/06_WaitThread/WaitThread.cpp)
->
 > 7. [MyThread2](https://github.com/devgunho/Windows_System_Programming/blob/master/WindowsSystemProgramming/07_MyThread2/MyThread.cpp)
->
-> 8. WaitMultiThreads
+> 8. [WaitMultiThreads](https://github.com/devgunho/Windows_System_Programming/blob/master/WindowsSystemProgramming/08_WaitMultiThreads/WaitMultiThreads.cpp)
 
 <br/>
 
 - **Synchronization objects for data protection / 데이터 보호를 위한 동기화 객체**
-- Describe Mutex and Semaphore from the perspective of protection of shared resources
+  - Describe Mutex and Semaphore from the perspective of protection of shared resources
 
 > 9. MutexTest
->
 > 10. MutexNoti
->
 > 11. SemaphoreTest
->
 > 12. TPSemaphore
->
 > 13. WQSemaphore
 
 <br/>
@@ -76,13 +69,9 @@
   - Description of synchronization-only objects for the purpose of controlling and notifying flows between threads.
 
 > 14. ExitWithEvent
->
 > 15. MyThread(3)_ModifyExit
->
 > 16. EventTest
->
 > 17. MultiSyncWaits
->
 > 18. EventNotify
 > 19. WQNotify
 > 20. EventNotify2
