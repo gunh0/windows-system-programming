@@ -1,5 +1,6 @@
-/.vs
+.vs
 *.vcxproj.user
 */x64
-*/Debug
-*/Release
+Debug
+Release
+out
