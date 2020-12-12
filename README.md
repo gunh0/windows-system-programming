@@ -1,14 +1,21 @@
 # Windows System Programming
 
 **_Window system programming from the perspective of synchronous and asynchronous Input/Output._**
+Windows system programming is a programming field closely related to the Windows operating system. In this field, you can develop various software by understanding and utilizing the internal structure and functions of the Windows operating system. Through this, you can implement higher performance and functionality at the operating system level. In addition, Windows system programming is closely related to hardware, so it is possible to understand the operation principle of the hardware and implement the interface between hardware and software. With these attractive aspects, Windows system programming has become a field where you can develop more efficient and high-performance software based on a deep understanding of the operating system and hardware.
 
 <br/>
 
+### Visual Studio Setting
+
+-   In Solution 'WindowsSystemProgramming' Propertry Pages
+-   'Current selection' Check
+-   Build & Run
+
 <br/>
 
-# 1. Synchronization (동기화)
+## 1. Synchronization
 
-### 1-1. Thread & Synchronization (스레드와 동기화)
+### 1-1. Thread & Synchronization
 
 **Windows system elements required for thread synchronization**
 
@@ -16,27 +23,27 @@
 
 ---
 
--   **Elements of Synchronization (동기화의 요소)**
+-   **Elements of Synchronization**
     -   Scheduling processes, Kernel objects, Threads, Thread scheduling
     -   Thread Programming Pattern
 
 > 1.  [CreateThread](https://github.com/devgunho/Windows_System_Programming/blob/master/WindowsSystemProgramming/01_CreateThread/CreateThread.cpp)
-> 2.  [ThreadExcept](https://github.com/devgunho/Windows_System_Programming/blob/master/WindowsSystemProgramming/02_ThreadExcept/ThreadExcept.cpp)
-> 3.  [MyThread](https://github.com/devgunho/Windows_System_Programming/blob/master/WindowsSystemProgramming/03_MyThread/MyThread.cpp)
+> 2.  ThreadExcept
+> 3.  MyThread
 
 <br/>
 
--   **Thread Synchronization / 스레드 동기화**
+-   **Thread Synchronization**
     -   The Meaning and Necessity of Synchronicization from the Perspective of **Atomicity** and **Instruction Reordering**
 
-> 4.  [InterLock](https://github.com/devgunho/Windows_System_Programming/blob/master/WindowsSystemProgramming/04_InterLock/InterLock.cpp)
-> 5.  [MemBarrier](https://github.com/devgunho/Windows_System_Programming/blob/master/WindowsSystemProgramming/05_MemBarrier/MemBarrier.cpp)
+> 4.  InterLock
+> 5.  MemBarrier
 
 <br/>
 
 <br/>
 
-### 1-2. Synchronize with Kernel Objects (커널 객체와 동기화)
+### 1-2. Synchronize with Kernel Objects
 
 **Describes the sync wait functions and sync-only kernel objects provided by Windows**
 
@@ -44,17 +51,17 @@
 
 ---
 
--   **Thread Synchronization API / 스레드 동기화 API**
+-   **Thread Synchronization API**
     -   Description of the standby function that waits for threads to synchronize
     -   Understand the relationship between the standby function and the kernel object
 
-> 6. [WaitThread](https://github.com/devgunho/Windows_System_Programming/blob/master/WindowsSystemProgramming/06_WaitThread/WaitThread.cpp)
-> 7. [MyThread2](https://github.com/devgunho/Windows_System_Programming/blob/master/WindowsSystemProgramming/07_MyThread2/MyThread.cpp)
-> 8. [WaitMultiThreads](https://github.com/devgunho/Windows_System_Programming/blob/master/WindowsSystemProgramming/08_WaitMultiThreads/WaitMultiThreads.cpp)
+> 6. WaitThread
+> 7. MyThread2
+> 8. WaitMultiThreads
 
 <br/>
 
--   **Synchronization objects for data protection / 데이터 보호를 위한 동기화 객체**
+-   **Synchronization objects for data protection**
     -   Describe Mutex and Semaphore from the perspective of protection of shared resources
 
 > 9. MutexTest
@@ -65,14 +72,17 @@
 
 <br/>
 
--   **Synchronization object for flow control / 흐름 제어를 위한 동기화 객체**
+-   **Synchronization object for flow control**
     -   Description of synchronization-only objects for the purpose of controlling and notifying flows between threads.
 
-> 14. ExitWithEvent
-> 15. MyThread(3)\_ModifyExit
-> 16. EventTest
-> 17. MultiSyncWaits
-> 18. EventNotify
-> 19. WQNotify
-> 20. EventNotify2
-> 21. EvtRWLock
+> └─14. ExitWithEvent
+> └─15. MyThread(3)\_ModifyExit
+> └─16. EventTest
+> └─17. MultiSyncWaits
+> └─18. EventNotify
+> └─19. WQNotify
+> └─20. EventNotify2
+>
+> Using Events for RW Lock
+> └─21. EvtRWLock
+> └─22. [EvtRWLock2](https://github.com/devgunho/Windows_System_Programming/blob/master/WindowsSystemProgramming/22_EvtRWLock2/22_EvtRWLock2.cpp)
