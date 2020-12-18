@@ -21,6 +21,8 @@ With these attractive aspects, Windows system programming has become a field whe
 
 <br/>
 
+<br/>
+
 ## 1. Synchronization
 
 ### 1-1. Thread & Synchronization
@@ -28,8 +30,6 @@ With these attractive aspects, Windows system programming has become a field whe
 **Windows system elements required for thread synchronization**
 
 **Concepts and Needs of Synchronization**
-
----
 
 -   **Elements of Synchronization**
     -   Scheduling processes, Kernel objects, Threads, Thread scheduling
@@ -48,7 +48,7 @@ With these attractive aspects, Windows system programming has become a field whe
 -   **Thread Synchronization**
     -   The Meaning and Necessity of Synchronicization from the Perspective of **Atomicity** and **Instruction Reordering**
 
-**\_Instruction Reordering**
+**_Instruction Reordering_**
 
 └─4. InterLock
 
@@ -58,13 +58,13 @@ With these attractive aspects, Windows system programming has become a field whe
 
 <br/>
 
+---
+
 ### 1-2. Synchronize with Kernel Objects
 
 **Describes the sync wait functions and sync-only kernel objects provided by Windows**
 
 **Usefulness and utilization of threads or window messages**
-
----
 
 -   **Thread Synchronization API**
     -   Description of the standby function that waits for threads to synchronize
@@ -85,7 +85,11 @@ With these attractive aspects, Windows system programming has become a field whe
 
 └─10. MutexNoti
 
-└─11. SemaphoreTest
+**_Semaphore_**
+
+Mutexes provide exclusive access to a shared resource, while semaphores control access to a pool of resources.
+
+└─11. [SemaphoreTest](https://github.com/devgunho/Windows_System_Programming/blob/master/WindowsSystemProgramming/11_SemaphoreTest/SemaphoreTest.cpp)
 
 └─12. TPSemaphore
 
@@ -121,3 +125,5 @@ With these attractive aspects, Windows system programming has become a field whe
 └─23. [WaitableTimerTest](https://github.com/devgunho/Windows_System_Programming/blob/master/WindowsSystemProgramming/23_WaitableTimerTest/WaitableTimerTest.cpp)
 
 └─24. [WaitableTimerTest2](https://github.com/devgunho/Windows_System_Programming/blob/master/WindowsSystemProgramming/24_WaitableTimerTest2/WaitableTimerTest2.cpp)
+
+└─25. [ManualWTTest](https://github.com/devgunho/Windows_System_Programming/blob/master/WindowsSystemProgramming/25_ManualWTTest/ManualWTTest.cpp)
