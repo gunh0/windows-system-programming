@@ -6,8 +6,8 @@ using namespace std;
 
 struct ERWLOCK
 {
-	HANDLE	_hevRO, _hevWO;
-	LONG	_nRoRefs;
+	HANDLE _hevRO, _hevWO;
+	LONG _nRoRefs;
 
 	ERWLOCK()
 	{
@@ -16,14 +16,16 @@ struct ERWLOCK
 	}
 	~ERWLOCK()
 	{
-		if (_hevRO != NULL) CloseHandle(_hevRO);
-		if (_hevWO != NULL) CloseHandle(_hevWO);
+		if (_hevRO != NULL)
+			CloseHandle(_hevRO);
+		if (_hevWO != NULL)
+			CloseHandle(_hevWO);
 	}
 };
 
 ERWLOCK g_rwl;
-int		g_nValue;
-LONG	g_bIsExit;
+int g_nValue;
+LONG g_bIsExit;
 
 DWORD WINAPI ReaderProc(PVOID pParam)
 {
@@ -47,7 +49,7 @@ DWORD WINAPI ReaderProc(PVOID pParam)
 	return 0;
 }
 
-#define MAX_THR_CNT	5
+#define MAX_THR_CNT 5
 void _tmain()
 {
 	g_rwl._hevRO = CreateEvent(NULL, TRUE, TRUE, NULL);
@@ -86,4 +88,3 @@ void _tmain()
 
 	WaitForMultipleObjects(MAX_THR_CNT, roThrs, TRUE, INFINITE);
 }
-
