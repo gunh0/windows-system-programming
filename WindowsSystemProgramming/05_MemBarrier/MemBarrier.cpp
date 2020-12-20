@@ -47,10 +47,4 @@ void _tmain()
 	cout << "A=" << g_a << ", B=" << g_b << endl;
 }
 
-//Debug mode (F10) > Windows > Disassembley (Ctrl + Alt + D)
-/*
-  최적화 결과 코드는 작성한 순서대로 명령어 배치가 이루어지지 않는다.
-  C++로 작성한 TP25 엔트리 함수에서는 g_x에 25 값을 대입하는 코드가 먼저 나와 있지만,
-  역어셈플된 결과는 g_a = g_y; 코드 뒤로 간다.
-  결국 CPU는 g_a에 g_y 값을 대입하는 코드를 먼저 실행한 후 g_x에 25를 대입하는 코드를 실행하게 된다.
-*/
+// Debug mode (F10) > Windows > Disassembley (Ctrl + Alt + D)

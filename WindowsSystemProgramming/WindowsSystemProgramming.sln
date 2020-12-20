@@ -49,6 +49,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "26_WakeSleepSystem", "26_Wa
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "21_EvtRWLock", "21_EvtRWLock\21_EvtRWLock.vcxproj", "{8CED6AE4-A3BE-42D3-B0F9-554DFC0D89BF}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "27_SetWaitableTimerEx", "27_SetWaitableTimerEx\27_SetWaitableTimerEx.vcxproj", "{A9B6CD1E-E568-4146-A436-44C53A6DB777}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -241,6 +243,14 @@ Global
 		{8CED6AE4-A3BE-42D3-B0F9-554DFC0D89BF}.Release|x64.Build.0 = Release|x64
 		{8CED6AE4-A3BE-42D3-B0F9-554DFC0D89BF}.Release|x86.ActiveCfg = Release|Win32
 		{8CED6AE4-A3BE-42D3-B0F9-554DFC0D89BF}.Release|x86.Build.0 = Release|Win32
+		{A9B6CD1E-E568-4146-A436-44C53A6DB777}.Debug|x64.ActiveCfg = Debug|x64
+		{A9B6CD1E-E568-4146-A436-44C53A6DB777}.Debug|x64.Build.0 = Debug|x64
+		{A9B6CD1E-E568-4146-A436-44C53A6DB777}.Debug|x86.ActiveCfg = Debug|Win32
+		{A9B6CD1E-E568-4146-A436-44C53A6DB777}.Debug|x86.Build.0 = Debug|Win32
+		{A9B6CD1E-E568-4146-A436-44C53A6DB777}.Release|x64.ActiveCfg = Release|x64
+		{A9B6CD1E-E568-4146-A436-44C53A6DB777}.Release|x64.Build.0 = Release|x64
+		{A9B6CD1E-E568-4146-A436-44C53A6DB777}.Release|x86.ActiveCfg = Release|Win32
+		{A9B6CD1E-E568-4146-A436-44C53A6DB777}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
