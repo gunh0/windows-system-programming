@@ -51,6 +51,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "21_EvtRWLock", "21_EvtRWLoc
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "27_SetWaitableTimerEx", "27_SetWaitableTimerEx\27_SetWaitableTimerEx.vcxproj", "{A9B6CD1E-E568-4146-A436-44C53A6DB777}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "28_MsgNotify", "28_MsgNotify\28_MsgNotify.vcxproj", "{06FC26BE-9FC0-4D4D-BADC-B1A6FC31A9D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -251,6 +253,14 @@ Global
 		{A9B6CD1E-E568-4146-A436-44C53A6DB777}.Release|x64.Build.0 = Release|x64
 		{A9B6CD1E-E568-4146-A436-44C53A6DB777}.Release|x86.ActiveCfg = Release|Win32
 		{A9B6CD1E-E568-4146-A436-44C53A6DB777}.Release|x86.Build.0 = Release|Win32
+		{06FC26BE-9FC0-4D4D-BADC-B1A6FC31A9D6}.Debug|x64.ActiveCfg = Debug|x64
+		{06FC26BE-9FC0-4D4D-BADC-B1A6FC31A9D6}.Debug|x64.Build.0 = Debug|x64
+		{06FC26BE-9FC0-4D4D-BADC-B1A6FC31A9D6}.Debug|x86.ActiveCfg = Debug|Win32
+		{06FC26BE-9FC0-4D4D-BADC-B1A6FC31A9D6}.Debug|x86.Build.0 = Debug|Win32
+		{06FC26BE-9FC0-4D4D-BADC-B1A6FC31A9D6}.Release|x64.ActiveCfg = Release|x64
+		{06FC26BE-9FC0-4D4D-BADC-B1A6FC31A9D6}.Release|x64.Build.0 = Release|x64
+		{06FC26BE-9FC0-4D4D-BADC-B1A6FC31A9D6}.Release|x86.ActiveCfg = Release|Win32
+		{06FC26BE-9FC0-4D4D-BADC-B1A6FC31A9D6}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

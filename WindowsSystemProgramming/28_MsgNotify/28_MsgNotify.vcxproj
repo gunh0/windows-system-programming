@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{3d23ad93-8a57-4fa9-8e1d-557bf471113d}</ProjectGuid>
-    <RootNamespace>My07MyThread2</RootNamespace>
+    <ProjectGuid>{06fc26be-9fc0-4d4d-badc-b1a6fc31a9d6}</ProjectGuid>
+    <RootNamespace>My28MsgNotify</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,7 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="MyThread2.cpp" />
+    <ClCompile Include="MsgNotify.cpp" />
     <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>

@@ -1,8 +1,6 @@
-// stdafx.cpp : 표준 포함 파일만 들어 있는 소스 파일입니다.
-// CreateThread.pch는 미리 컴파일된 헤더가 됩니다.
-// stdafx.obj에는 미리 컴파일된 형식 정보가 포함됩니다.
+// Defines the frequently used standard system include files and project-related include files including stdafx.h.
+// Including stdafx.h improves build performance and is also used to include content that is not frequently changed during the build process.
+// stdafx.h is primarily used to declare commonly used header files and to shorten build time by not preprocessing less frequently used header files.
+// This file defines both the standard system include files and the infrequently changed include files.
 
-#include "stdafx.h"
-
-// TODO: 필요한 추가 헤더는
-// 이 파일이 아닌 STDAFX.H에서 참조합니다.
+# include "stdafx.h"

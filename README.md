@@ -71,18 +71,24 @@ With these attractive aspects, Windows system programming has become a field whe
     -   Description of the standby function that waits for threads to synchronize
     -   Understand the relationship between the standby function and the kernel object
 
-└─6. WaitThread
+**_Thread Waiting Functions_**
 
-└─7. MyThread2
+└─6. [WaitThread](https://github.com/devgunho/Windows_System_Programming/blob/master/WindowsSystemProgramming/06_WaitThread/WaitThread.cpp)
 
-└─8. WaitMultiThreads
+└─7. [MyThread2](https://github.com/devgunho/Windows_System_Programming/blob/master/WindowsSystemProgramming/07_MyThread2/MyThread2.cpp)
+
+└─8. [WaitMultiThreads](https://github.com/devgunho/Windows_System_Programming/blob/master/WindowsSystemProgramming/08_WaitMultiThreads/WaitMultiThreads.cpp)
 
 <br/>
 
 -   **Synchronization objects for data protection**
     -   Describe Mutex and Semaphore from the perspective of protection of shared resources
 
-└─9. MutexTest
+**_Mutex_**
+
+_Mutually exclusive access_
+
+└─9. [MutexTest](https://github.com/devgunho/Windows_System_Programming/blob/master/WindowsSystemProgramming/05_MemBarrier/MemBarrier.cpp)
 
 └─10. MutexNoti
 
@@ -132,3 +138,12 @@ _Mutexes provide exclusive access to a shared resource, while semaphores control
 └─26. [WakeSleepSystem](https://github.com/devgunho/Windows_System_Programming/blob/master/WindowsSystemProgramming/26_WakeSleepSystem/WakeSleepSystem.cpp)
 
 └─27. [SetWaitableTimerEx](https://github.com/devgunho/Windows_System_Programming/blob/master/WindowsSystemProgramming/27_SetWaitableTimerEx/SetWaitableTimerEx.cpp)
+
+<br/>
+
+-   **Notification**
+    -   Additional means and methods for synchronization in terms of notification, which can provide more flexibility in implementing synchronization, along with the mutex, semaphore, event, and waitable timer, all of which are dedicated synchronization objects.
+
+**_Integration of Thread and Message Queue_**
+
+└─28. [MsgNotify](https://github.com/devgunho/Windows_System_Programming/blob/master/WindowsSystemProgramming/28_MsgNotify/MsgNotify.cpp)
