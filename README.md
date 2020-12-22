@@ -113,9 +113,9 @@ _Mutexes provide exclusive access to a shared resource, while semaphores control
 
 └─15. [MyThread3](https://github.com/gunh0/Windows_System_Programming/blob/master/WindowsSystemProgramming/15_MyThread3/MyThread3.cpp)
 
-└─16. EventTest
+└─16. [EventTest](https://github.com/gunh0/Windows_System_Programming/blob/master/WindowsSystemProgramming/16_EventTest/EventTest.cpp)
 
-└─17. MultiSyncWaits
+└─17. [MultiSyncWaits](https://github.com/gunh0/Windows_System_Programming/blob/master/WindowsSystemProgramming/17_MultiSyncWaits/MultiSyncWaits.cpp)
 
 └─18. EventNotify
 
@@ -151,3 +151,5 @@ _Mutexes provide exclusive access to a shared resource, while semaphores control
 └─28. [MsgNotify](https://github.com/gunh0/Windows_System_Programming/blob/master/WindowsSystemProgramming/28_MsgNotify/MsgNotify.cpp)
 
 └─29. [MsgQueue](https://github.com/gunh0/Windows_System_Programming/blob/master/WindowsSystemProgramming/29_MsgQueue/MsgQueue.cpp)
+
+└─30. [MsgWaitMulti](https://github.com/gunh0/Windows_System_Programming/blob/master/WindowsSystemProgramming/30_MsgWaitMulti/MsgWaitMulti.cpp)
