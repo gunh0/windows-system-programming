@@ -32,6 +32,8 @@ With these attractive aspects, Windows system programming has become a field whe
 
 **Concepts and Needs of Synchronization**
 
+<br/>
+
 -   **Elements of Synchronization**
     -   Scheduling processes, Kernel objects, Threads, Thread scheduling
     -   Thread Programming Pattern
@@ -67,6 +69,8 @@ With these attractive aspects, Windows system programming has become a field whe
 
 **Usefulness and utilization of threads or window messages**
 
+<br/>
+
 -   **Thread Synchronization API**
     -   Description of the standby function that waits for threads to synchronize
     -   Understand the relationship between the standby function and the kernel object
@@ -88,9 +92,9 @@ With these attractive aspects, Windows system programming has become a field whe
 
 _Mutually exclusive access_
 
-└─9. [MutexTest](https://github.com/gunh0/Windows_System_Programming/blob/master/WindowsSystemProgramming/05_MemBarrier/MemBarrier.cpp)
+└─9. [MutexTest](https://github.com/gunh0/Windows_System_Programming/blob/master/WindowsSystemProgramming/09_MutexTest/MutexTest.cpp)
 
-└─10. MutexNoti
+└─10. [MutexNoti](https://github.com/gunh0/Windows_System_Programming/blob/master/WindowsSystemProgramming/10_MutexNoti/MutexNoti.cpp)
 
 **_Semaphore_**
 
@@ -117,11 +121,13 @@ _Mutexes provide exclusive access to a shared resource, while semaphores control
 
 └─17. [MultiSyncWaits](https://github.com/gunh0/Windows_System_Programming/blob/master/WindowsSystemProgramming/17_MultiSyncWaits/MultiSyncWaits.cpp)
 
-└─18. EventNotify
+**_Using Events as Signaling Mechanisms_**
 
-└─19. WQNotify
+└─18. [EventNotify](https://github.com/gunh0/Windows_System_Programming/blob/master/WindowsSystemProgramming/18_EventNotify/EventNotify.cpp)
 
-└─20. EventNotify2
+└─19. [WQNotify](https://github.com/gunh0/Windows_System_Programming/blob/master/WindowsSystemProgramming/19_WQNotify/WQNotify.cpp)
+
+└─20. [EventNotify2](https://github.com/gunh0/Windows_System_Programming/blob/master/WindowsSystemProgramming/20_EventNotify2/EventNotify2.cpp)
 
 **_Using Events for RW Lock_**
 
@@ -153,3 +159,11 @@ _Mutexes provide exclusive access to a shared resource, while semaphores control
 └─29. [MsgQueue](https://github.com/gunh0/Windows_System_Programming/blob/master/WindowsSystemProgramming/29_MsgQueue/MsgQueue.cpp)
 
 └─30. [MsgWaitMulti](https://github.com/gunh0/Windows_System_Programming/blob/master/WindowsSystemProgramming/30_MsgWaitMulti/MsgWaitMulti.cpp)
+
+**_Combining with Callback Functions_**
+
+└─31. [WaitPool](https://github.com/gunh0/Windows_System_Programming/blob/master/WindowsSystemProgramming/31_WaitPool/WaitPool.cpp)
+
+**_.NET BackgroundWorker_**
+
+└─32. [BackgroundWorker](https://github.com/gunh0/Windows_System_Programming/32_BackgroundWorker)

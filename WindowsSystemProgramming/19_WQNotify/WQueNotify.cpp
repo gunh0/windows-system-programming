@@ -19,7 +19,6 @@ class WAIT_QUE
 	{
 		LONG _cmd, _size;
 		PBYTE _data;
-		// 명령 식별과 데이터 길이를 위한 변수 _data에 실제 데이터의 포인터를 저장
 
 		NOTI_ITEM()
 		{
@@ -31,7 +30,6 @@ class WAIT_QUE
 		}
 	};
 	typedef std::list<NOTI_ITEM> ITEM_QUE;
-	// 큐에 추가될 항목에 대한 구조체와 큐를 정의
 
 	HANDLE m_hMutx;
 	HANDLE m_hSema;
@@ -51,14 +49,12 @@ public:
 	}
 
 public:
-	// Init 함수에서 뮤텍스와 세마포어를 생성
 	void Init()
 	{
 		m_hSema = CreateSemaphore(NULL, 0, LONG_MAX, NULL);
 		m_hMutx = CreateMutex(NULL, FALSE, NULL);
 	}
 
-	// 큐에 항목을 추가하는 Enqueue 멤버 함수를 정의
 	void Enqueue(LONG cmd, LONG size = 0, PBYTE data = NULL)
 	{
 		NOTI_ITEM ni(cmd, size, data);
@@ -70,8 +66,7 @@ public:
 		ReleaseSemaphore(m_hSema, 1, NULL);
 	}
 
-	// 큐로부터 항목을 추출하는 Dequeue 멤버 함수를 정의
-	PBYTE Dequeue(LONG& cmd, LONG& size)
+	PBYTE Dequeue(LONG &cmd, LONG &size)
 	{
 		DWORD dwWaitCode = WaitForSingleObject(m_hSema, INFINITE);
 		if (dwWaitCode == WAIT_FAILED)
@@ -94,7 +89,7 @@ public:
 
 DWORD WINAPI WorkerProc(LPVOID pParam)
 {
-	WAIT_QUE* pwq = (WAIT_QUE*)pParam;
+	WAIT_QUE *pwq = (WAIT_QUE *)pParam;
 	DWORD dwThrId = GetCurrentThreadId();
 
 	while (true)
@@ -102,8 +97,6 @@ DWORD WINAPI WorkerProc(LPVOID pParam)
 		LONG lCmd, lSize;
 		PBYTE pData = pwq->Dequeue(lCmd, lSize);
 
-		// WaitForSigleObject를 통해 쓰기 통지 이벤트에 대해 대기 상태에서 풀려나 공유 버퍼를 읽은 후,
-		// SetEvent를 통해 읽기 통지 이벤트를 시그널링 해주는 과정을 하나의 Deque 호출로 대체
 		if (lSize < 0)
 		{
 			cout << " ~~~ WaitForSingleObject failed : " << GetLastError() << endl;
@@ -133,8 +126,8 @@ DWORD WINAPI WorkerProc(LPVOID pParam)
 		{
 			PSYSTEMTIME pst = (PSYSTEMTIME)pData;
 			printf("  <== R-TH %d read TIME : %04d-%02d-%02d %02d:%02d:%02d+%03d\n",
-				dwThrId, pst->wYear, pst->wMonth, pst->wDay, pst->wHour,
-				pst->wMinute, pst->wSecond, pst->wMilliseconds);
+				   dwThrId, pst->wYear, pst->wMonth, pst->wDay, pst->wHour,
+				   pst->wMinute, pst->wSecond, pst->wMilliseconds);
 		}
 		break;
 		}
@@ -188,14 +181,13 @@ void _tmain()
 		{
 			lSize = strlen(szIn), lCmd = CMD_STR;
 			pData = new BYTE[lSize + 1];
-			strcpy((char*)pData, szIn);
+			strcpy((char *)pData, szIn);
 		}
 
 		wq.Enqueue(lCmd, lSize, pData);
-		// 콘솔에서 데이터를 입력받은 명령과 크기, 그리고 데이터 포인터를 Enque 함수를 통해 큐에 추가
 	}
 
-	wq.Enqueue(CMD_EXIT);	// 종료 처리를 위해 종료 명령을 큐에 추가
+	wq.Enqueue(CMD_EXIT);
 	WaitForSingleObject(hThread, INFINITE);
 
 	cout << "======= End WQueNotify Test ==========" << endl;
