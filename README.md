@@ -63,7 +63,7 @@ With these attractive aspects, Windows system programming has become a field whe
 
 ---
 
-### 1-2. Synchronize with Kernel Objects
+### 1-2. Synchronization with Kernel Objects
 
 **Describes the sync wait functions and sync-only kernel objects provided by Windows**
 
@@ -166,4 +166,36 @@ _Mutexes provide exclusive access to a shared resource, while semaphores control
 
 **_.NET BackgroundWorker_**
 
-└─32. [BackgroundWorker](https://github.com/gunh0/Windows_System_Programming/32_BackgroundWorker)
+└─32. [BackgroundWorker](https://github.com/gunh0/windows-system-programming/tree/master/WindowsSystemProgramming/32_BackgroundWorkerr)
+
+<br/>
+
+<br/>
+
+---
+
+### 1-3. User Mode Synchronization
+
+**Windows provides various synchronization kernel objects that operate in kernel mode, as well as synchronization objects and APIs that operate in user mode.**
+
+**In user mode, a combination of spin lock and kernel-mode switching or a separate method is used for synchronization.**
+
+**Therefore, one of the advantages of user-mode synchronization is its speed.**
+
+**By minimizing the switch to kernel mode, thread context switching can also be reduced, making it faster than synchronization using kernel objects.**
+
+<br/>
+
+-   **Critical Section**
+
+    -   A critical section is a block of code that must be executed atomically, which means that only one thread can execute it at a time. The purpose of a critical section is to prevent race conditions, which occur when two or more threads access shared resources simultaneously and interfere with each other's operations.
+
+    -   In Windows, a critical section is a user-mode synchronization object that provides a lightweight and efficient way of protecting shared resources. It works by using a spin lock mechanism, which means that a thread repeatedly checks if the critical section is available until it can acquire it.
+
+    -   To use a critical section, a thread must first call the InitializeCriticalSection function to create it. Then, the thread can enter the critical section by calling the EnterCriticalSection function and leave it by calling the LeaveCriticalSection function. If a thread tries to enter a critical section that is already locked by another thread, it will be blocked until the critical section becomes available.
+
+    -   Critical sections are a useful synchronization mechanism for protecting small sections of code that access shared resources frequently. However, they are not suitable for protecting resources that are accessed infrequently or for long periods of time, as they can cause excessive spinning and waste CPU cycles. In these cases, more heavyweight synchronization mechanisms, such as mutexes or semaphores, should be used instead.
+
+**_Using Critical Section_**
+
+└─33. [LockAccount](https://github.com/gunh0/Windows_System_Programming/tree/master/WinSysProg_Csharp/33_LockAccount)
