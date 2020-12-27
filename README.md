@@ -1,6 +1,6 @@
 # Windows System Programming
 
-**_Window system programming from the perspective of synchronous and asynchronous Input/Output._**
+> Windows system programming from the perspective of synchronous and asynchronous Input/Output.
 
 Windows system programming is a programming field closely related to the Windows operating system.
 
@@ -199,3 +199,5 @@ _Mutexes provide exclusive access to a shared resource, while semaphores control
 **_Using Critical Section_**
 
 └─33. [LockAccount](https://github.com/gunh0/Windows_System_Programming/tree/master/WinSysProg_Csharp/33_LockAccount)
+
+└─34. [CriticalSectionAccount](https://github.com/gunh0/windows-system-programming/tree/master/34_CriticalSectionAccount/CriticalSectionAccount)
