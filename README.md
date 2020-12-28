@@ -200,4 +200,6 @@ _Mutexes provide exclusive access to a shared resource, while semaphores control
 
 └─33. [LockAccount](https://github.com/gunh0/Windows_System_Programming/tree/master/WinSysProg_Csharp/33_LockAccount)
 
-└─34. [CriticalSectionAccount](https://github.com/gunh0/windows-system-programming/tree/master/34_CriticalSectionAccount/CriticalSectionAccount)
+└─34. [CriticalSectionAccount](https://github.com/gunh0/windows-system-programming/tree/master/34_CriticalSectionAccount/CriticalSectionAccount.cpp)
+
+└─35. [CriticalSectionTest](https://github.com/gunh0/windows-system-programming/tree/master/35_CriticalSectionTest/CriticalSectionTest.cpp)
